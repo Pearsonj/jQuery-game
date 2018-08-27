@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+    overflow: hidden;
+}
+
+h1{
+    padding: 0;
+}
+
+.instructions img {
+    display: inline;
+    width: 60px;
+}
+
+.images {
+    text-align: center;
+}
+
+.card-body img {
+    width: 70px;
+}
+
+.green img {
+    width: 60px;
+}
