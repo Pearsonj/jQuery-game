@@ -9,7 +9,7 @@
 // make a list of variables that the game will revert back too when the goal of wins or losses is met //
 
 $(document).ready(function(){
-    var userChoice = "";
+    var userChoice = false;
     var computerChoice = Math.floor(Math.random()*600);
     var green =3;
     var red = 6;
@@ -24,6 +24,9 @@ $(document).ready(function(){
 
     $('.green').on('click', function(){
         $('.userAmount').html('<h1>' + green + '</h1>');
+        if (userChoice += 0){
+            userChoice = userChoice += green;
+        };
         
     });
 
@@ -35,14 +38,10 @@ $(document).ready(function(){
     $('.blue').on('click', function(){
        
         $('.userAmount').html('<h1>' + blue + '</h1>');
-       
-        
     });
 
     $('.purple').on('click', function(){
         $('.userAmount').html('<h1>' + purple + '</h1>');
         
     });
-
-   
 });
