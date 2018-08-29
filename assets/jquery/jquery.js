@@ -8,40 +8,89 @@
 // make an if/else statement to state that you lost when you go over the amount in the target area //
 // make a list of variables that the game will revert back too when the goal of wins or losses is met //
 
-$(document).ready(function(){
-    var userChoice = false;
-    var computerChoice = Math.floor(Math.random()*600);
-    var green =3;
-    var red = 6;
-    var blue = 9;
-    var purple =12;
+$(document).ready(function () {
+    var userChoice = 0;
+    var computerChoice = Math.floor(Math.random() * 121) + 19;
+    var green = Math.floor(Math.random() * 12) + 3;
+    var red = Math.floor(Math.random() * 12) + 3;
+    var blue = Math.floor(Math.random() * 12) + 3;
+    var purple = Math.floor(Math.random() * 12) + 3;
     var wins = 0;
     var losses = 0;
 
-    
+    function reset() {
+        userChoice = 0;
+        computerChoice = Math.floor(Math.random() * 101) + 19;
+        green = Math.floor(Math.random() * 9) + 3;
+        red = Math.floor(Math.random() * 9) + 3;
+        blue = Math.floor(Math.random() * 9) + 3;
+        purple = Math.floor(Math.random() * 9) + 3;
+
+    };
+
+
+    function isWin() {
+        if (userChoice === computerChoice) {
+            userChoice = 0;
+            reset();
+            wins++;
+            $('.wins').html('<h1>' + wins + '</h1>');
+            $('.computer').html('<h1>' + computerChoice + '</h1>');
+            
+        }
+
+        if (computerChoice < userChoice) {
+            userChoice = 0;
+            reset();
+            losses++;
+            $('.losses').html('<h1>' + losses + '</h1>');
+            $('.computer').html('<h1>' + computerChoice + '</h1>');
+            
+
+        }
+    };
+
+
     $('.computer').html('<h1>' + computerChoice + '</h1>');
 
-
-    $('.green').on('click', function(){
-        $('.userAmount').html('<h1>' + green + '</h1>');
-        if (userChoice += 0){
-            userChoice = userChoice += green;
-        };
-        
+    $('.green').on('click', function () {
+        userChoice = userChoice + green;
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
+        isWin();
+        console.log(userChoice);
     });
 
-    $('.red').on('click', function(){
-        $('.userAmount').html('<h1>' + red + '</h1>');
-        
+    $('.red').on('click', function () {
+        userChoice = userChoice + red;
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
+        isWin();
+        console.log(userChoice);
     });
 
-    $('.blue').on('click', function(){
-       
-        $('.userAmount').html('<h1>' + blue + '</h1>');
+    $('.blue').on('click', function () {
+        userChoice = userChoice + blue;
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
+        isWin();
+        console.log(userChoice);
     });
 
-    $('.purple').on('click', function(){
-        $('.userAmount').html('<h1>' + purple + '</h1>');
-        
+    $('.purple').on('click', function () {
+        userChoice = userChoice + purple;
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
+        isWin();
+        console.log(userChoice);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
