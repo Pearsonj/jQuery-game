@@ -31,7 +31,9 @@ $(document).ready(function () {
 
     function isWin() {
         if (userChoice === computerChoice) {
+            alert('You Won!');
             userChoice = 0;
+            $('.userAmount').html('<h1>' + userChoice + '</h1>');
             reset();
             wins++;
             $('.wins').html('<h1>' + wins + '</h1>');
@@ -40,7 +42,9 @@ $(document).ready(function () {
         }
 
         if (computerChoice < userChoice) {
+            alert('You Lost!');
             userChoice = 0;
+            $('.userAmount').html('<h1>' + userChoice + '</h1>');
             reset();
             losses++;
             $('.losses').html('<h1>' + losses + '</h1>');
