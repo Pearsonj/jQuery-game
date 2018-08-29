@@ -3,7 +3,42 @@
     /* overflow: hidden; */
 }
 
-h1{
+.jumbotron {
+    background-image: url(../images/The-Legend-of-Zelda-Symphany-of-the-Goddesses.jpg);
+}
+
+.display-4 {
+    background-color: rgba(255, 254, 254, 0.692);
+    color: rgb(0, 126, 0);
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.card-header {
+    font-size: 25px;
+    background-color: rgba(255, 254, 254, 0.692);
+    color: rgb(0, 126, 0);
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.card-header-bottom {
+    font-size: 25px;
+    color: rgb(0, 126, 0);
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+    height: 50px;
+}
+
+.triforce {
+    float: right;
+}
+
+.triforce1 {
+    float: left;
+}
+
+h1 {
     padding: 0;
 }
 

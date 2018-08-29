@@ -36,7 +36,7 @@ $(document).ready(function () {
             wins++;
             $('.wins').html('<h1>' + wins + '</h1>');
             $('.computer').html('<h1>' + computerChoice + '</h1>');
-            
+
         }
 
         if (computerChoice < userChoice) {
@@ -45,7 +45,7 @@ $(document).ready(function () {
             losses++;
             $('.losses').html('<h1>' + losses + '</h1>');
             $('.computer').html('<h1>' + computerChoice + '</h1>');
-            
+
 
         }
     };
