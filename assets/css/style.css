@@ -5,6 +5,8 @@
 
 .jumbotron {
     background-image: url(../images/The-Legend-of-Zelda-Symphany-of-the-Goddesses.jpg);
+    margin: 0;
+    padding: 0;
 }
 
 .display-4 {
@@ -30,6 +32,8 @@
     height: 50px;
 }
 
+
+
 .triforce {
     float: right;
 }
@@ -48,7 +52,7 @@ h1 {
 
 .instructions img {
     display: inline;
-    width: 60px;
+    width: 80px;
 }
 
 .images {
@@ -56,7 +60,11 @@ h1 {
 }
 
 .card-body img {
-    width: 70px;
+    width: 80px;
+}
+
+.bomb{
+    width: 75px;
 }
 
 .green img {

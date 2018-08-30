@@ -31,8 +31,8 @@ $(document).ready(function () {
 
     function isWin() {
         if (userChoice === computerChoice) {
-            alert('You Won!');
-            userChoice = 0;
+            $('.userAmount').html('<h1>' + userChoice + '</h1>');
+            alert('You Won! Your final number was right on! ' + userChoice);
             $('.userAmount').html('<h1>' + userChoice + '</h1>');
             reset();
             wins++;
@@ -42,8 +42,8 @@ $(document).ready(function () {
         }
 
         if (computerChoice < userChoice) {
-            alert('You Lost!');
-            userChoice = 0;
+            $('.userAmount').html('<h1>' + userChoice + '</h1>');
+            alert('You Lost! Your final number was ' + userChoice);
             $('.userAmount').html('<h1>' + userChoice + '</h1>');
             reset();
             losses++;
@@ -59,29 +59,29 @@ $(document).ready(function () {
 
     $('.green').on('click', function () {
         userChoice = userChoice + green;
-        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         isWin();
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         console.log(userChoice);
     });
 
     $('.red').on('click', function () {
         userChoice = userChoice + red;
-        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         isWin();
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         console.log(userChoice);
     });
 
     $('.blue').on('click', function () {
         userChoice = userChoice + blue;
-        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         isWin();
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         console.log(userChoice);
     });
 
     $('.purple').on('click', function () {
         userChoice = userChoice + purple;
-        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         isWin();
+        $('.userAmount').html('<h1>' + userChoice + '</h1>');
         console.log(userChoice);
     });
 
